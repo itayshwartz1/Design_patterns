@@ -1,96 +1,59 @@
-//
-// Created by itay2 on 09/02/2022.
-//
 #include <iostream>
 using namespace std;
-#include "algorithm"
-#include <vector>
 
-class Employee{
+
+
+class Color{
 public:
-    int id;
-    int age;
-    string name;
-    Employee(int id, int age, string name){
-        this->id = id;
-        this->age = age;
-        this->name = name;
-    }
-    Employee(){}
+    virtual string paint(){ return "";}
 };
-class Comperator{
+
+class Red : public Color{
 public:
-    bool virtual compare(Employee &a, Employee &b);
-};
-
-class IdComperator{
-    bool compare(Employee &a, Employee &b){
-        return a.id>b.id;
+    virtual string paint() override{
+        return "red";
     }
 };
 
-class NameComperator{
-    bool compare(Employee &a, Employee &b){
-        return a.name>b.name;
-    }
-};
-
-
-
-class Sorter{
+class Yellow : public Color{
 public:
-    Employee *array;
-    int size;
-    Comperator comperator;
-    Sorter(Employee *array, int size, Comperator comperator){
-        this->array = array;
-        this->size = size;
-        this->comperator = comperator;
+    virtual string paint() override{
+        return "yellow";
     }
-    virtual void sort();
 };
 
-class BubbleSort: Sorter{
+class House{
 public:
-
-    void sort() override{
-        for (int i = 0; i < size-1; i++)
-            for (int j = 0; j < size-i-1; j++)
-                if (comperator.compare(array[j], array[j+1]))
-                    swap(&array[j], &array[j+1]);
+    Color *color;
+    House(Color *color) {
+        this->color = color;
     }
-
-    void swap(Employee *a, Employee *b){
-        Employee temp = *a;
-        *a = *b;
-        *b = temp;
+    void paintHouse(){
+        cout << color->paint() << endl;
     }
-
+    virtual void BuildHouse(){}
+};
+class RoundHouse : public House{
+public:
+    RoundHouse(Color *color) : House(color){}
+    virtual void BuildHouse() override{
+        cout << "Round House in color: ";
+        paintHouse();
+    }
 };
 
-class InsertionSort : Sorter{
-    void sort() override{
-        int  j;
-        Employee key;
-        for (int i = 1; i < size; i++)
-        {
-            key = array[i];
-            j = i - 1;
+class TriangleHouse : public House{
+public:
+    TriangleHouse(Color *color) : House(color){}
 
-            /* Move elements of arr[0..i-1], that are
-            greater than key, to one position ahead
-            of their current position */
-            while (j >= 0 && comperator.compare(array[j] , key)){
-                array[j + 1] = array[j];
-                j = j - 1;
-            }
-            array[j + 1] = key;
-        }
+    virtual void BuildHouse() override {
+        cout << "Triangle House in color:";
+        paintHouse();
     }
 };
 
 int main(){
-    vector<int> vector = {1,2,3,5,7,898,1,5,3,2};
-
+    House* house = new RoundHouse( new Red());
+    house->BuildHouse();
     return 0;
-};
+}
