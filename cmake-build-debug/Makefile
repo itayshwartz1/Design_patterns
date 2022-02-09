@@ -118,29 +118,29 @@ Design_patterns\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\build
 .PHONY : Design_patterns\fast
 
-Structural_Patterns\Flyweight.obj: Structural_Patterns\Flyweight.cpp.obj
-.PHONY : Structural_Patterns\Flyweight.obj
+Structural_Patterns\Proxy.obj: Structural_Patterns\Proxy.cpp.obj
+.PHONY : Structural_Patterns\Proxy.obj
 
 # target to build an object file
-Structural_Patterns\Flyweight.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Flyweight.cpp.obj
-.PHONY : Structural_Patterns\Flyweight.cpp.obj
+Structural_Patterns\Proxy.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj
+.PHONY : Structural_Patterns\Proxy.cpp.obj
 
-Structural_Patterns\Flyweight.i: Structural_Patterns\Flyweight.cpp.i
-.PHONY : Structural_Patterns\Flyweight.i
+Structural_Patterns\Proxy.i: Structural_Patterns\Proxy.cpp.i
+.PHONY : Structural_Patterns\Proxy.i
 
 # target to preprocess a source file
-Structural_Patterns\Flyweight.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Flyweight.cpp.i
-.PHONY : Structural_Patterns\Flyweight.cpp.i
+Structural_Patterns\Proxy.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.i
+.PHONY : Structural_Patterns\Proxy.cpp.i
 
-Structural_Patterns\Flyweight.s: Structural_Patterns\Flyweight.cpp.s
-.PHONY : Structural_Patterns\Flyweight.s
+Structural_Patterns\Proxy.s: Structural_Patterns\Proxy.cpp.s
+.PHONY : Structural_Patterns\Proxy.s
 
 # target to generate assembly for a file
-Structural_Patterns\Flyweight.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Flyweight.cpp.s
-.PHONY : Structural_Patterns\Flyweight.cpp.s
+Structural_Patterns\Proxy.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.s
+.PHONY : Structural_Patterns\Proxy.cpp.s
 
 # Help Target
 help:
@@ -151,9 +151,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Design_patterns
-	@echo ... Structural_Patterns/Flyweight.obj
-	@echo ... Structural_Patterns/Flyweight.i
-	@echo ... Structural_Patterns/Flyweight.s
+	@echo ... Structural_Patterns/Proxy.obj
+	@echo ... Structural_Patterns/Proxy.i
+	@echo ... Structural_Patterns/Proxy.s
 .PHONY : help
 
 

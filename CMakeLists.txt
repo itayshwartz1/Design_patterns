@@ -3,4 +3,4 @@ project(Design_patterns)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(Design_patterns "Structural Patterns/Flyweight.cpp")
+add_executable(Design_patterns "Structural Patterns/Proxy.cpp")

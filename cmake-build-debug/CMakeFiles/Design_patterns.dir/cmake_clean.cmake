@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Design_patterns.dir/Structural_Patterns/Flyweight.cpp.obj"
+  "CMakeFiles/Design_patterns.dir/Structural_Patterns/Proxy.cpp.obj"
   "Design_patterns.exe"
   "Design_patterns.exe.manifest"
   "Design_patterns.lib"
