@@ -6,9 +6,13 @@
 
 #IncludeRegexTransform: 
 
-D:/Design-patterns/Structural Patterns/Flyweight.cpp
-iostream
+D:/Design-patterns/Structural Patterns/Proxy.cpp
+map
 -
-list
+string
+D:/Design-patterns/Structural Patterns/string
+iterator
+-
+iostream
 -
 
