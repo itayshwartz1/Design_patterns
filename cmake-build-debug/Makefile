@@ -118,29 +118,29 @@ Design_patterns\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\build
 .PHONY : Design_patterns\fast
 
-Structural_Patterns\Proxy.obj: Structural_Patterns\Proxy.cpp.obj
-.PHONY : Structural_Patterns\Proxy.obj
+Behavioral_Patterns\Observer.obj: Behavioral_Patterns\Observer.cpp.obj
+.PHONY : Behavioral_Patterns\Observer.obj
 
 # target to build an object file
-Structural_Patterns\Proxy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj
-.PHONY : Structural_Patterns\Proxy.cpp.obj
+Behavioral_Patterns\Observer.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj
+.PHONY : Behavioral_Patterns\Observer.cpp.obj
 
-Structural_Patterns\Proxy.i: Structural_Patterns\Proxy.cpp.i
-.PHONY : Structural_Patterns\Proxy.i
+Behavioral_Patterns\Observer.i: Behavioral_Patterns\Observer.cpp.i
+.PHONY : Behavioral_Patterns\Observer.i
 
 # target to preprocess a source file
-Structural_Patterns\Proxy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.i
-.PHONY : Structural_Patterns\Proxy.cpp.i
+Behavioral_Patterns\Observer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.i
+.PHONY : Behavioral_Patterns\Observer.cpp.i
 
-Structural_Patterns\Proxy.s: Structural_Patterns\Proxy.cpp.s
-.PHONY : Structural_Patterns\Proxy.s
+Behavioral_Patterns\Observer.s: Behavioral_Patterns\Observer.cpp.s
+.PHONY : Behavioral_Patterns\Observer.s
 
 # target to generate assembly for a file
-Structural_Patterns\Proxy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.s
-.PHONY : Structural_Patterns\Proxy.cpp.s
+Behavioral_Patterns\Observer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.s
+.PHONY : Behavioral_Patterns\Observer.cpp.s
 
 # Help Target
 help:
@@ -151,9 +151,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Design_patterns
-	@echo ... Structural_Patterns/Proxy.obj
-	@echo ... Structural_Patterns/Proxy.i
-	@echo ... Structural_Patterns/Proxy.s
+	@echo ... Behavioral_Patterns/Observer.obj
+	@echo ... Behavioral_Patterns/Observer.i
+	@echo ... Behavioral_Patterns/Observer.s
 .PHONY : help
 
 

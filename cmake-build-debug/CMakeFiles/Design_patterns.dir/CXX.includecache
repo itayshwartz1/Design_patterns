@@ -6,13 +6,11 @@
 
 #IncludeRegexTransform: 
 
-D:/Design-patterns/Structural Patterns/Proxy.cpp
-map
--
+D:/Design-patterns/Behavioral Patterns/Observer.cpp
+vector
+D:/Design-patterns/Behavioral Patterns/vector
 string
-D:/Design-patterns/Structural Patterns/string
-iterator
--
+D:/Design-patterns/Behavioral Patterns/string
 iostream
 -
 
