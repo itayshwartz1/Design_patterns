@@ -55,33 +55,33 @@ include CMakeFiles\Design_patterns.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\Design_patterns.dir\flags.make
 
-CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj: CMakeFiles\Design_patterns.dir\flags.make
-CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj: "..\Behavioral Patterns\Observer.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Observer.cpp.obj"
+CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj: CMakeFiles\Design_patterns.dir\flags.make
+CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj: "..\Behavioral Patterns\Template.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Template.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj /FdCMakeFiles\Design_patterns.dir\ /FS -c "D:\Design-patterns\Behavioral Patterns\Observer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj /FdCMakeFiles\Design_patterns.dir\ /FS -c "D:\Design-patterns\Behavioral Patterns\Template.cpp"
 <<
 
-CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Observer.cpp.i"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Design-patterns\Behavioral Patterns\Observer.cpp"
+CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Template.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Design-patterns\Behavioral Patterns\Template.cpp"
 <<
 
-CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Observer.cpp.s"
+CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Template.cpp.s"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.s /c "D:\Design-patterns\Behavioral Patterns\Observer.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.s /c "D:\Design-patterns\Behavioral Patterns\Template.cpp"
 <<
 
 # Object files for target Design_patterns
 Design_patterns_OBJECTS = \
-"CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj"
+"CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj"
 
 # External object files for target Design_patterns
 Design_patterns_EXTERNAL_OBJECTS =
 
-Design_patterns.exe: CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj
+Design_patterns.exe: CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj
 Design_patterns.exe: CMakeFiles\Design_patterns.dir\build.make
 Design_patterns.exe: CMakeFiles\Design_patterns.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Design_patterns.exe"

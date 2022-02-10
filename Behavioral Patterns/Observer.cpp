@@ -1,10 +1,11 @@
 #include "vector"
 #include "string"
-class Observer;
-class Subject;
 #include <iostream>
 
 using namespace std;
+
+class Observer;
+class Subject;
 
 
 class Observer{

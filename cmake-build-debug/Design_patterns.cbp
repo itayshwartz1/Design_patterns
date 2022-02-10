@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Design-patterns/Behavioral Patterns/Observer.cpp">
+		<Unit filename="D:/Design-patterns/Behavioral Patterns/Template.cpp">
 			<Option target="Design_patterns"/>
 		</Unit>
 		<Unit filename="D:/Design-patterns/CMakeLists.txt">

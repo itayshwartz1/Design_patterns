@@ -118,29 +118,29 @@ Design_patterns\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\build
 .PHONY : Design_patterns\fast
 
-Behavioral_Patterns\Observer.obj: Behavioral_Patterns\Observer.cpp.obj
-.PHONY : Behavioral_Patterns\Observer.obj
+Behavioral_Patterns\Template.obj: Behavioral_Patterns\Template.cpp.obj
+.PHONY : Behavioral_Patterns\Template.obj
 
 # target to build an object file
-Behavioral_Patterns\Observer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.obj
-.PHONY : Behavioral_Patterns\Observer.cpp.obj
+Behavioral_Patterns\Template.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.obj
+.PHONY : Behavioral_Patterns\Template.cpp.obj
 
-Behavioral_Patterns\Observer.i: Behavioral_Patterns\Observer.cpp.i
-.PHONY : Behavioral_Patterns\Observer.i
+Behavioral_Patterns\Template.i: Behavioral_Patterns\Template.cpp.i
+.PHONY : Behavioral_Patterns\Template.i
 
 # target to preprocess a source file
-Behavioral_Patterns\Observer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.i
-.PHONY : Behavioral_Patterns\Observer.cpp.i
+Behavioral_Patterns\Template.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.i
+.PHONY : Behavioral_Patterns\Template.cpp.i
 
-Behavioral_Patterns\Observer.s: Behavioral_Patterns\Observer.cpp.s
-.PHONY : Behavioral_Patterns\Observer.s
+Behavioral_Patterns\Template.s: Behavioral_Patterns\Template.cpp.s
+.PHONY : Behavioral_Patterns\Template.s
 
 # target to generate assembly for a file
-Behavioral_Patterns\Observer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Observer.cpp.s
-.PHONY : Behavioral_Patterns\Observer.cpp.s
+Behavioral_Patterns\Template.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Behavioral_Patterns\Template.cpp.s
+.PHONY : Behavioral_Patterns\Template.cpp.s
 
 # Help Target
 help:
@@ -151,9 +151,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Design_patterns
-	@echo ... Behavioral_Patterns/Observer.obj
-	@echo ... Behavioral_Patterns/Observer.i
-	@echo ... Behavioral_Patterns/Observer.s
+	@echo ... Behavioral_Patterns/Template.obj
+	@echo ... Behavioral_Patterns/Template.i
+	@echo ... Behavioral_Patterns/Template.s
 .PHONY : help
 
 

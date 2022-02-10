@@ -6,11 +6,7 @@
 
 #IncludeRegexTransform: 
 
-D:/Design-patterns/Behavioral Patterns/Observer.cpp
-vector
-D:/Design-patterns/Behavioral Patterns/vector
-string
-D:/Design-patterns/Behavioral Patterns/string
+D:/Design-patterns/Behavioral Patterns/Template.cpp
 iostream
 -
 

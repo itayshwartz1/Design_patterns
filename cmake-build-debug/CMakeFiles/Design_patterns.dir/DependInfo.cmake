@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "D:/Design-patterns/Behavioral Patterns/Observer.cpp" "D:/Design-patterns/cmake-build-debug/CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Observer.cpp.obj"
+  "D:/Design-patterns/Behavioral Patterns/Template.cpp" "D:/Design-patterns/cmake-build-debug/CMakeFiles/Design_patterns.dir/Behavioral_Patterns/Template.cpp.obj"
   )
 set(CMAKE_CXX_COMPILER_ID "MSVC")
 
