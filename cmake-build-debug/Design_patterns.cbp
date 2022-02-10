@@ -82,7 +82,7 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="D:/Design-patterns/Structural Patterns/Proxy.cpp">
+		<Unit filename="D:/Design-patterns/Creational Patterns/Singleton.cpp">
 			<Option target="Design_patterns"/>
 		</Unit>
 		<Unit filename="D:/Design-patterns/CMakeLists.txt">

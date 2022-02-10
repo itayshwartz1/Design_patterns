@@ -22,12 +22,14 @@ public:
     string request(string query) override{
         map<string ,string>::iterator it;
         it = cache.find(query);
-        if (it != cache.end())
+        if (it != cache.end()) {
+            cout << "frome RealSubject" << endl;
             return it->second;
+        }
     }
 };
 
-class Proxy : Subject{
+class Proxy : public Subject{
 public:
     RealSubject* realSubject;
     Proxy(RealSubject *realSubject): Subject(){
@@ -38,6 +40,7 @@ public:
         map<string, string>::iterator it;
         it = cache.find(query);
         if (it != cache.end()) {
+            cout << "frome proxy" << endl;
             return it->second;
         }
         else{
@@ -50,8 +53,11 @@ public:
 
 int main(){
     RealSubject* realSubject = new RealSubject;
-    Proxy *proxy = new Proxy(realSubject);
-    string  s = proxy->request("How many days are there in a year");
+    Subject *subject = new Proxy(realSubject);
+    string  a = subject->request("What is the distance from Earth to the Moon?");
+    string  b = subject->request("What is the distance from Earth to the Moon?");
+    string  c = subject->request("How many days are there in a year");
+    string  d = subject->request("How many days are there in a year");
     return 0;
 }
 

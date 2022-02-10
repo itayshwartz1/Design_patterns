@@ -118,29 +118,29 @@ Design_patterns\fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\build
 .PHONY : Design_patterns\fast
 
-Structural_Patterns\Proxy.obj: Structural_Patterns\Proxy.cpp.obj
-.PHONY : Structural_Patterns\Proxy.obj
+Creational_Patterns\Singleton.obj: Creational_Patterns\Singleton.cpp.obj
+.PHONY : Creational_Patterns\Singleton.obj
 
 # target to build an object file
-Structural_Patterns\Proxy.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj
-.PHONY : Structural_Patterns\Proxy.cpp.obj
+Creational_Patterns\Singleton.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj
+.PHONY : Creational_Patterns\Singleton.cpp.obj
 
-Structural_Patterns\Proxy.i: Structural_Patterns\Proxy.cpp.i
-.PHONY : Structural_Patterns\Proxy.i
+Creational_Patterns\Singleton.i: Creational_Patterns\Singleton.cpp.i
+.PHONY : Creational_Patterns\Singleton.i
 
 # target to preprocess a source file
-Structural_Patterns\Proxy.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.i
-.PHONY : Structural_Patterns\Proxy.cpp.i
+Creational_Patterns\Singleton.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.i
+.PHONY : Creational_Patterns\Singleton.cpp.i
 
-Structural_Patterns\Proxy.s: Structural_Patterns\Proxy.cpp.s
-.PHONY : Structural_Patterns\Proxy.s
+Creational_Patterns\Singleton.s: Creational_Patterns\Singleton.cpp.s
+.PHONY : Creational_Patterns\Singleton.s
 
 # target to generate assembly for a file
-Structural_Patterns\Proxy.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.s
-.PHONY : Structural_Patterns\Proxy.cpp.s
+Creational_Patterns\Singleton.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Design_patterns.dir\build.make /nologo -$(MAKEFLAGS) CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.s
+.PHONY : Creational_Patterns\Singleton.cpp.s
 
 # Help Target
 help:
@@ -151,9 +151,9 @@ help:
 	@echo ... edit_cache
 	@echo ... rebuild_cache
 	@echo ... Design_patterns
-	@echo ... Structural_Patterns/Proxy.obj
-	@echo ... Structural_Patterns/Proxy.i
-	@echo ... Structural_Patterns/Proxy.s
+	@echo ... Creational_Patterns/Singleton.obj
+	@echo ... Creational_Patterns/Singleton.i
+	@echo ... Creational_Patterns/Singleton.s
 .PHONY : help
 
 

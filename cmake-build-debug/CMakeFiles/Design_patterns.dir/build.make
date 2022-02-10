@@ -55,33 +55,33 @@ include CMakeFiles\Design_patterns.dir\progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles\Design_patterns.dir\flags.make
 
-CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj: CMakeFiles\Design_patterns.dir\flags.make
-CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj: "..\Structural Patterns\Proxy.cpp"
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Design_patterns.dir/Structural_Patterns/Proxy.cpp.obj"
+CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj: CMakeFiles\Design_patterns.dir\flags.make
+CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj: "..\Creational Patterns\Singleton.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Design_patterns.dir/Creational_Patterns/Singleton.cpp.obj"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj /FdCMakeFiles\Design_patterns.dir\ /FS -c "D:\Design-patterns\Structural Patterns\Proxy.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoCMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj /FdCMakeFiles\Design_patterns.dir\ /FS -c "D:\Design-patterns\Creational Patterns\Singleton.cpp"
 <<
 
-CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Design_patterns.dir/Structural_Patterns/Proxy.cpp.i"
-	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.i @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Design-patterns\Structural Patterns\Proxy.cpp"
+CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Design_patterns.dir/Creational_Patterns/Singleton.cpp.i"
+	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe > CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.i @<<
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:\Design-patterns\Creational Patterns\Singleton.cpp"
 <<
 
-CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Design_patterns.dir/Structural_Patterns/Proxy.cpp.s"
+CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Design_patterns.dir/Creational_Patterns/Singleton.cpp.s"
 	C:\PROGRA~2\MICROS~2\2019\COMMUN~1\VC\Tools\MSVC\1429~1.301\bin\Hostx86\x86\cl.exe @<<
- /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.s /c "D:\Design-patterns\Structural Patterns\Proxy.cpp"
+ /nologo /TP $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) /FoNUL /FAs /FaCMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.s /c "D:\Design-patterns\Creational Patterns\Singleton.cpp"
 <<
 
 # Object files for target Design_patterns
 Design_patterns_OBJECTS = \
-"CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj"
+"CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj"
 
 # External object files for target Design_patterns
 Design_patterns_EXTERNAL_OBJECTS =
 
-Design_patterns.exe: CMakeFiles\Design_patterns.dir\Structural_Patterns\Proxy.cpp.obj
+Design_patterns.exe: CMakeFiles\Design_patterns.dir\Creational_Patterns\Singleton.cpp.obj
 Design_patterns.exe: CMakeFiles\Design_patterns.dir\build.make
 Design_patterns.exe: CMakeFiles\Design_patterns.dir\objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=D:\Design-patterns\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Design_patterns.exe"
