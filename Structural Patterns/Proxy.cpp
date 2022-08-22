@@ -1,6 +1,10 @@
+// The purpose of this design pattern is to control access to another object for various purposes.
+// We create a kind of mediator so that the requests don't have to reach the appropriate object.
+// It may be that the broker can answer our question in a faster time (for example by using cache memory). 
+// In addition, the broker can prevent certain queries, etc...
+
 #include <map>
 #include "string"
-#include <iterator>
 #include <iostream>
 
 using namespace std;
@@ -8,7 +12,6 @@ using namespace std;
 class Subject{
 public:
     map<string, string> cache;
-    Subject(){}
     virtual string request(string query) = 0;
 };
 
@@ -32,15 +35,13 @@ public:
 class Proxy : public Subject{
 public:
     RealSubject* realSubject;
-    Proxy(RealSubject *realSubject): Subject(){
-        this->realSubject = realSubject;
-    }
+    Proxy(RealSubject *realSubject): realSubject(realSubject){}
 
     string request(string query) override{
         map<string, string>::iterator it;
         it = cache.find(query);
         if (it != cache.end()) {
-            cout << "frome proxy" << endl;
+            cout << "from proxy" << endl;
             return it->second;
         }
         else{
@@ -52,12 +53,11 @@ public:
 };
 
 int main(){
-    RealSubject* realSubject = new RealSubject;
-    Subject *subject = new Proxy(realSubject);
-    string  a = subject->request("What is the distance from Earth to the Moon?");
-    string  b = subject->request("What is the distance from Earth to the Moon?");
-    string  c = subject->request("How many days are there in a year");
-    string  d = subject->request("How many days are there in a year");
+    Subject *subject = new Proxy(new RealSubject);
+    string  a = subject->request("What is the distance from Earth to the Moon?");   //from RealSubject
+    string  b = subject->request("What is the distance from Earth to the Moon?");   //from proxy
+    string  c = subject->request("How many days are there in a year");              //from RealSubject
+    string  d = subject->request("How many days are there in a year");              //from proxy
     return 0;
 }
 
