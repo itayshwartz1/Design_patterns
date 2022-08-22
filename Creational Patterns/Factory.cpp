@@ -1,3 +1,11 @@
+// The purpose of the design pattern is to create objects that share a uniform interface without knowing their 
+// specific classes. For this we will save the constructors in some data structure.
+//Apparently it was much simpler to make new and be done with the piece. But there are cases where this template
+// is needed. Suppose there is a company with n types of employees and according to input from the user we create
+// a new employee. The naive solution of the new will mean that we need n conditions. A faster solution is to have a
+// hash table with all the creators and given the name of a worker type we will be able to reach the
+// appropriate creator in O(1) time.
+
 #include <map>
 #include "string"
 using namespace std;
@@ -29,25 +37,25 @@ public:
     virtual product* create() = 0;
 };
 
-class CreatorA : public Creator{
+class ConcreteCreatorA : public Creator{
 public:
-    CreatorA():Creator(){}
+    ConcreteCreatorA():Creator(){}
     virtual product* create() override{
         return new productA();
     };
 };
 
-class CreatorB : public Creator{
+class ConcreteCreatorB : public Creator{
 public:
-    CreatorB():Creator(){}
+    ConcreteCreatorB():Creator(){}
     virtual product* create() override{
         return new productB();
     };
 };
 
-class CreatorC : public Creator{
+class ConcreteCreatorC : public Creator{
 public:
-    CreatorC():Creator(){}
+    ConcreteCreatorC():Creator(){}
     virtual product* create() override{
         return new productC();
     };
@@ -55,9 +63,9 @@ public:
 
 int main() {
     map<string,Creator*> map;
-    map["A"] = new CreatorA();
-    map["B"] = new CreatorB();
-    map["C"] = new CreatorC();
+    map["A"] = new ConcreteCreatorA();
+    map["B"] = new ConcreteCreatorB();
+    map["C"] = new ConcreteCreatorC();
 
     product * productA = (map.find("A")->second->create());
     product * productB = (map.find("B")->second->create());
