@@ -1,3 +1,6 @@
+// Template Method is a behavioral design pattern that defines the skeleton of an algorithm in the superclass
+// but lets subclasses override specific steps of the algorithm without changing its structure.
+
 #include <iostream>
 using namespace std;
 
@@ -18,7 +21,6 @@ public:
     void bubbleSort(Employee arr[], int n){
         int i, j;
         for (i = 0; i < n-1; i++)
-
             for (j = 0; j < n-i-1; j++)
                 if (compare(arr[j] , arr[j+1]))
                     swap(&arr[j], &arr[j+1]);
@@ -26,7 +28,7 @@ public:
 
     virtual bool compare(Employee &a, Employee& b) = 0;
 
-    void printArr(Employee arr[], int n){
+    void printArr(Employee arr[], int n) const{
         for(int i = 0; i < n; i++){
             cout << "ID: " << arr[i].id << " Age: " << arr[i].age << endl;
         }
@@ -36,7 +38,6 @@ public:
 
 class BubbleSortByAge : public BubbleSort{
 public:
-    BubbleSortByAge(){};
     bool compare(Employee &a, Employee &b) override {
         return a.age > b.age;
     }
@@ -44,7 +45,6 @@ public:
 
 class BubbleSortById : public BubbleSort{
 public:
-    BubbleSortById(){};
     bool compare(Employee &a, Employee &b) override {
         return a.id > b.id;
     }
@@ -62,4 +62,3 @@ int main(){
     bubbleSortById->printArr(array, 6);
     return 0;
 }
-
