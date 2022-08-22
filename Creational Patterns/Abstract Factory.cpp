@@ -1,3 +1,11 @@
+//The abstract factory pattern provides a way to encapsulate a group of individual factories that have
+// a common theme without specifying their concrete classes. In normal usage, the client software creates a concrete
+// implementation of the abstract factory and then uses the generic interface of the factory to create the concrete
+// objects that are part of the theme. The client does not know (or care) which concrete objects it gets from each
+// of these internal factories, since it uses only the generic interfaces of their products. This pattern separates
+// the details of implementation of a set of objects from their general usage and relies on object composition, as
+// object creation is implemented in methods exposed in the factory interface.
+
 #include <iostream>
 using namespace std;
 
@@ -25,7 +33,7 @@ public:
 class LightSaber : public Sword{
 public:
     LightSaber() : Sword(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "voom voom" << endl;
     };
 };
@@ -33,14 +41,14 @@ public:
 class Deflector : public Shield{
 public:
     Deflector() : Shield(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "Deflector"<< endl;
     };
 };
 class MandalorianHelmet : public Helmet{
 public:
     MandalorianHelmet() : Helmet(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "Mandalorian Helmet"<< endl;
     };
 };
@@ -49,7 +57,7 @@ public:
 class GimlyHelmet : public Helmet{
 public:
     GimlyHelmet() : Helmet(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "Gimly Helmet"<< endl;
     };
 };
@@ -57,7 +65,7 @@ public:
 class AndurilSword : public Sword{
 public:
     AndurilSword() : Sword(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "Anduril Sword"<< endl;
     };
 };
@@ -65,7 +73,7 @@ public:
 class RoundShield : public Shield{
 public:
     RoundShield() : Shield(){}
-    virtual void functionality(){
+    void functionality() override{
         cout << "Round Shield"<< endl;
     };
 };
@@ -80,26 +88,26 @@ public:
 
 class StarWarsFactory : public AbstractFactory{
 public:
-    Product* createSword(){
+    Product* createSword() override{
         return new LightSaber();
     };
-    Product* createShield(){
+    Product* createShield() override{
         return new Deflector();
     };
-    Product* createHelmet(){
+    Product* createHelmet() override{
         return new MandalorianHelmet();
     };
 };
 
 class LordOfTheRingsFactory : public AbstractFactory{
 public:
-    Product* createSword(){
+    Product* createSword() override{
         return new AndurilSword();
     };
-    Product* createShield(){
+    Product* createShield() override{
         return new RoundShield();
     };
-    Product* createHelmet(){
+    Product* createHelmet() override{
         return new GimlyHelmet();
     };
 };
@@ -112,11 +120,17 @@ int main(){
     Product *shield = abstractFactory->createShield();
     Product *helmet = abstractFactory->createHelmet();
 
+
+    cout<< "Star Wars:" << endl;
     sword->functionality();
     shield->functionality();
     helmet->functionality();
 
+    cout<< "--------------------" << endl;
+
     abstractFactory = new LordOfTheRingsFactory();
+
+    cout<< "Lord Of The Rings:" << endl;
 
     sword = abstractFactory->createSword();
     shield = abstractFactory->createShield();
@@ -127,4 +141,3 @@ int main(){
     helmet->functionality();
     return 0;
 }
-
