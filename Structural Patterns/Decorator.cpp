@@ -2,7 +2,6 @@
 // We create base object (pizza) and the concrete object that derived from it (BigPizza, SmallPizza).
 // After that we need to create decorator classes that inherit  from Component and hold component.
 // Each concrete decorator (olives, onion cheese) inherit from it.
-//
 
 #include <iostream>
 using namespace std;
