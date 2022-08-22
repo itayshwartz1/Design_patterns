@@ -1,7 +1,9 @@
+// Observer is a behavioral design pattern that lets you define a subscription mechanism
+// to notify multiple objects about any events that happen to the object they’re observing.
+
 #include "vector"
 #include "string"
 #include <iostream>
-
 using namespace std;
 
 class Observer;
@@ -10,7 +12,7 @@ class Subject;
 
 class Observer{
 public:
-    virtual void update(Subject* sunject) = 0;
+    virtual void update(Subject* subject) = 0;
 };
 
 
@@ -23,19 +25,19 @@ public:
 
     Subject(string name): name(name){}
 
-    string getState(){
+    string getState() const{
         return state;
     }
     void setState(string s){
         this->state = s;
     }
 
-    string getName(){
+    string getName() const{
         return name;
     }
 
     void Attach(Observer* observer){
-        observers.push_back(observer);
+        observers.emplace_back(observer);
     };
 
     void Detach(Observer* observer){
@@ -59,7 +61,7 @@ class TalentHunter : public Observer{
 public:
     TalentHunter(){}
     void update(Subject* subject) {
-        if(subject->getState() == "Tree"){
+        if(subject->getState() == "Three"){
             cout << "The Talent Hunter say: " << subject->getName() << " good job" << endl;
         }
     }
@@ -75,7 +77,6 @@ public:
         else {
             cout << "The Crowd say: WOWWWW" << endl;
         }
-
     }
 };
 
@@ -96,8 +97,6 @@ public:
     void Functionality(){}
 };
 
-
-
 int main(){
     Observer* talentScouter = new TalentHunter();
     Observer* crowd = new Crowd();
@@ -114,17 +113,27 @@ int main(){
     alice->Attach(bobMother);
     alice->Attach(talentScouter);
 
-    bob->setState("Tree");
-    bob->Notify();
 
+    cout << "bob score three! what everyone says?" << endl;
+    bob->setState("Three");
+    bob->Notify();
+    cout << " " << endl;
+
+    cout << "bob slipped! what everyone says?" << endl;
     bob->setState("Slipped");
     bob->Notify();
+    cout << " " << endl;
 
-    alice->setState("Tree");
+    cout << "alice score three! what everyone says?" << endl;
+    alice->setState("Three");
     alice->Notify();
+    cout << " " << endl;
 
+
+    cout << "bob score two! what everyone says?" << endl;
     alice->setState("Two");
     alice->Notify();
+
 
     return 0;
 }
