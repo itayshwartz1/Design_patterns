@@ -1,5 +1,6 @@
 //This design pattern helps us to duplicate objects of the interface type without knowing what the specific type of
-// the object is. Everyone will implement the cloning method
+// the object is. Everyone will implement the cloning method.
+
 #include <iostream>
 using namespace std;
 
