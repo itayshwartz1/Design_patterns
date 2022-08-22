@@ -3,7 +3,7 @@
 // Then we need Flyweight Factory - he is on charge who will create.
 // If there is somw concrete flyweight that is alredy exist in the program, the factory should return pointer to
 // the existing object. Otherwise he will create and return pointer to the new object.
-// 
+
 
 #include <iostream>
 #include <list>
