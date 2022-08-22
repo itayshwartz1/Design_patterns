@@ -1,3 +1,6 @@
+// Builder is a creation design pattern that lets you construct complex objects step by step.
+// The pattern allows you to produce different types and representations of an object using the same construction code.
+
 #include <iostream>
 #include "list"
 using namespace std;
@@ -5,13 +8,13 @@ using namespace std;
 class Enemy{
 public:
     Enemy()= default;
-    virtual void print() = 0;
+    virtual void print() const= 0;
 };
 
 class Guard : public Enemy{
 public:
     Guard()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "Guard" << endl;
     };
 };
@@ -19,7 +22,7 @@ public:
 class KoopaTroopas : public Enemy{
 public:
     KoopaTroopas()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "Koopa Troopas" << endl;
     };
 };
@@ -27,13 +30,13 @@ public:
 class Character{
 public:
     Character()= default;
-    virtual void print() = 0;
+    virtual void print() const= 0;
 };
 
 class Aladdin : public Character{
 public:
     Aladdin()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "Aladdin" << endl;
     };
 };
@@ -41,7 +44,7 @@ public:
 class Mario : public Character{
 public:
     Mario()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "Mario" << endl;
     };
 };
@@ -49,7 +52,7 @@ public:
 class Jafar : public Character{
 public:
     Jafar()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "Jafar" << endl;
     };
 };
@@ -57,7 +60,7 @@ public:
 class KingKoopa : public Character{
 public:
     KingKoopa()= default;
-    virtual void print(){
+    virtual void print() const{
         cout << "King Koopa" << endl;
     };
 };
@@ -83,31 +86,27 @@ public:
 
 
 class AladdinLevelBulder : public LevelBuilder {
-    virtual void creatCharacter() override {
+    void creatCharacter() override {
         this->level->character = new Aladdin();
     };
-    virtual void creatBoss() override {
+    void creatBoss() override {
         this->level->boss = new Jafar();
     };
-    virtual void creatEnemy() override {
+    void creatEnemy() override {
         this->level->enemyList.push_back(new Guard());
     };
-public:
-    AladdinLevelBulder() : LevelBuilder(){}
 };
 
-class MarioLevelBulder : public LevelBuilder {
-    virtual void creatCharacter() override {
+class MarioLevelBuilder : public LevelBuilder {
+    void creatCharacter() override {
         this->level->character = new Mario();
     };
-    virtual void creatBoss() override {
+    void creatBoss() override {
         this->level->boss = new KingKoopa();
     };
-    virtual void creatEnemy() override {
+    void creatEnemy() override {
         this->level->enemyList.push_back(new KoopaTroopas());
     };
-public:
-    MarioLevelBulder() : LevelBuilder(){}
 };
 
 class Director{
@@ -177,7 +176,7 @@ public:
 };
 
 int main(){
-    Director* expert = new ExpertLevel(new MarioLevelBulder());
+    Director* expert = new ExpertLevel(new MarioLevelBuilder());
     expert->construct();
     expert->start();
 
@@ -187,4 +186,3 @@ int main(){
 
     return 0;
 }
-
