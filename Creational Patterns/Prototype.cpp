@@ -1,16 +1,18 @@
+//This design pattern helps us to duplicate objects of the interface type without knowing what the specific type of
+// the object is. Everyone will implement the cloning method
 #include <iostream>
 using namespace std;
 
 class Prototype {
 public:
-    virtual Prototype* clone() = 0;
+    virtual Prototype* clone() const = 0;
 };
 
 class Sheep : public Prototype{
 public:
     Sheep() {}
-    Prototype* clone() override{
-        cout << "MAAA! my name is dolly" << endl;
+    Prototype* clone() const override{
+        cout << "MAAA! my name is dolly!" << endl;
         return new Sheep();
     }
 };
@@ -18,8 +20,8 @@ public:
 class HumenCell : public Prototype{
 public:
     HumenCell() {}
-    Prototype* clone() override{
-        cout << "Hello im a clone cell" << endl;
+    Prototype* clone() const override{
+        cout << "Hello im a clone cell!" << endl;
         return new HumenCell();
     }
 };
@@ -32,5 +34,3 @@ int main(){
     Prototype* secondCell = firstCell->clone();
     return 0;
 }
-
-
