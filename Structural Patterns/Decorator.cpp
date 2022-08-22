@@ -1,26 +1,32 @@
+// This pattern solves a combination of different behaviors for a base object.Without it, we need to create 2^n classes.
+// We create base object (pizza) and the concrete object that derived from it (BigPizza, SmallPizza).
+// After that we need to create decorator classes that inherit  from Component and hold component.
+// Each concrete decorator (olives, onion cheese) inherit from it.
+//
+
 #include <iostream>
 using namespace std;
 
 //Component
 class Pizza {
 public:
-    virtual void draw() = 0;
+    virtual void draw() const = 0;
 };
 
 //Concrete Component
 class BigPizza : public Pizza {
 public:
     BigPizza() {}
-    void draw() override {
-        cout << "Big Pizza pizza with: ";
+    void draw() const override {
+        cout << "Big Pizza pizza with:" <<endl;
     }
 };
 
 class SmallPizza : public Pizza {
 public:
     SmallPizza() {}
-    void draw() override {
-        cout << "Small Pizza pizza with: ";
+    void draw() const override {
+        cout << "Small Pizza pizza with:" <<endl;
     }
 };
 
@@ -29,11 +35,11 @@ class Extra : public Pizza {
 public:
     Pizza *pizza;
 
-    Extra(Pizza *extraOnPizza) {
+    Extra(Pizza* &extraOnPizza) {
         pizza = extraOnPizza;
     }
-    virtual void addBehavior() {}
-    void draw() override {
+    virtual void addBehavior()const {}
+    void draw() const override {
         pizza->draw();
         addBehavior();
     }
@@ -45,7 +51,7 @@ public:
     Olives(Pizza *extra) : Extra(extra){}
 
     virtual void addBehavior() {
-        cout << "Olives ";
+        cout << "Olives" <<endl;
     }
 };
 
@@ -53,8 +59,8 @@ class Onion : public Extra {
 public:
     Onion(Pizza *extra) : Extra(extra){}
 
-    virtual void addBehavior() {
-        cout << "Onion ";
+    virtual void addBehavior() const{
+        cout << "Onion"<<endl;
     }
 };
 
@@ -62,8 +68,8 @@ class Cheese : public Extra {
 public:
     Cheese(Pizza *extra) : Extra(extra){}
 
-    virtual void addBehavior() {
-        cout << "Cheese ";
+    virtual void addBehavior() const {
+        cout << "Cheese" <<endl;
     }
 };
 
@@ -72,8 +78,3 @@ int main() {
     pizza->draw();
     return 0;
 }
-
-
-
-
-
