@@ -1,7 +1,13 @@
+// The purpose of the design pattern is to reduce the number of objects we hold at a given time.
+// We need to create Flyweight class and concrete Flyweight(Soldier, Tank, Airplane).
+// Then we need Flyweight Factory - he is on charge who will create.
+// If there is somw concrete flyweight that is alredy exist in the program, the factory should return pointer to
+// the existing object. Otherwise he will create and return pointer to the new object.
+// 
+
 #include <iostream>
 #include <list>
 using namespace std;
-
 
 class Flyweight{
 public:
@@ -43,7 +49,6 @@ public:
             Tank *tank = new Tank("Tank");
             list.push_back(*tank);
             return tank;
-
         }
         if (flyweightName == "Airplane"){
             Airplane *airplane = new Airplane("Airplane");
@@ -61,4 +66,3 @@ int main(){
     Flyweight* soldier3 = flyweightFactory->getFlyweight("Soldier");
 
 }
-
