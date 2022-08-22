@@ -1,3 +1,7 @@
+// Command is a behavioral design pattern that turns a request into a stand-alone object that contains all
+// information about the request. This transformation lets you pass requests as a method arguments, *delay* or
+// *queue* a request’s execution, and support *undoable* operations.
+
 #include <iostream>
 #include "list"
 using namespace std;
@@ -63,7 +67,7 @@ public:
 int main() {
     Tv *tv = new Tv();
 
-    cout << "Tv befor: " <<endl;
+    cout << "Tv before: " <<endl;
     cout << "is on: " << tv->on << endl;
     cout << "volume: " << tv->volume << endl << endl;
 
@@ -74,7 +78,8 @@ int main() {
     remote->addCommand(new IncreaceVol(tv));
     remote->addCommand(new TurnOff(tv));
     remote->addCommand(new TurnOn(tv));
-
+    
+    // only now the commands are executing!
     remote->executeCommands();
 
     cout << "Tv after: " <<endl;
@@ -82,4 +87,3 @@ int main() {
     cout << "volume: " << tv->volume << endl;
     return 0;
 }
-
