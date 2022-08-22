@@ -1,26 +1,26 @@
+//State is a behavioral design pattern that lets an object alter its behavior when its internal state changes.
+// It appears as if the object changed its class.
+
 #include "string"
 #include <iostream>
 using namespace std;
 
-
 class State{
 public:
-    virtual void Handle() = 0;
+    virtual void  Handle() const = 0;
 };
 
-class Helthy : public State {
+class Healthy : public State {
 public:
-    Helthy(){}
-    void Handle() override{
-        cout << "walk" << endl;
+    void Handle() const override{
+        cout << "Walk" << endl;
     }
 };
 
 class Sick : public State {
 public:
-    Sick(){}
-    void Handle() override{
-        cout << "walk with crutches" << endl;
+    void Handle() const override{
+        cout << "Walk with crutches" << endl;
     }
 };
 
@@ -31,13 +31,13 @@ public:
     void setState(State* state){
         this->state = state;
     }
-    void move(){
+    void move() const{
         this->state->Handle();
     }
 };
 
 int main(){
-    Robot *robot = new Robot(new Helthy());
+    auto *robot = new Robot(new Healthy());
     robot->move();
     robot->setState(new Sick);
     robot->move();
