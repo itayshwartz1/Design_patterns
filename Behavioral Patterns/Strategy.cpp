@@ -1,10 +1,11 @@
+//Strategy is a behavioral design pattern that lets you define a family of algorithms, put each of them
+// into a separate class, and make their objects interchangeable.
+
 #include <iostream>
 using namespace std;
 
 class Solution {
 public:
-    Solution() {}
-
     virtual void theSolution() = 0;
 };
 
@@ -27,23 +28,15 @@ class SolutionA : public Solution {
     void theSolution() override {
         cout << "The problem solved with A" << endl;
     }
-
-public:
-    SolutionA() {}
 };
 
 class SolutionB : public Solution {
-public:
-    SolutionB() {}
-
     void theSolution() override {
         cout << "The problem solved with B" << endl;
     }
 };
 
 class SolutionC : public Solution {
-public:
-    SolutionC() {}
     void theSolution() override {
         cout << "The problem solved with C" << endl;
     }
@@ -59,4 +52,3 @@ int main() {
 
     return 0;
 }
-
